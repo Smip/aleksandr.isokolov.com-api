@@ -1,0 +1,41 @@
+{
+    "require": {
+        "akrabat/ip-address-middleware": "^1.0",
+        "cocur/slugify": "^3.2",
+        "grimzy/laravel-mysql-spatial": "^2.1",
+        "guzzlehttp/guzzle": "~6.0",
+        "illuminate/database": "^5.4",
+        "monolog/monolog": "^1.24",
+        "phpfastcache/phpfastcache": "^7.0",
+        "ramsey/uuid": "^3.8",
+        "respect/validation": "^1.1",
+        "slim/slim": "^3.0",
+        "tuupola/cors-middleware": "^1.0",
+        "vlucas/phpdotenv": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.2"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer", 
+            "url": "https://packagist.org"
+        },
+        { 
+            "packagist": false
+        }
+    ]
+}
