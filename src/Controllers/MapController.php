@@ -80,7 +80,6 @@ class MapController extends AbstractController
                     'maps' => $maps,
                     'total' => $total_maps
         ]);
-
     }
 
     public function get(Request $request, Response $response, $args) {
@@ -122,6 +121,12 @@ class MapController extends AbstractController
                         'messages' => $validation->errors()
                             ], \Slim\Http\StatusCode::HTTP_BAD_REQUEST);
         }
+        if ($map->locked) {
+            return $response->withJson([
+                        'map' => $map
+            ]);
+        }
+
         $center = $request->getParam('center');
         $min_zoom = $request->getParam('min_zoom');
         $max_zoom = $request->getParam('max_zoom');

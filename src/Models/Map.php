@@ -26,6 +26,7 @@ class Map extends Model
     protected $casts = [
         'updated_at' => 'datetime:c',
         'created_at' => 'datetime:c',
+        'locked' => 'boolean'
     ];
     protected $with = ['features'];
     protected $fillable = [
